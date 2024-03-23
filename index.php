@@ -1,15 +1,7 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="./Assets/css/style.css">
-    <script src="./assets/js/script.js"></script>
-    <script src="https://kit.fontawesome.com/16ddabd7d0.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <?php include('./assets/include/header.inc'); ?>
+<?php
+    include('./assets/include/header.php'); 
+    require('./assets/include/config.php')
+?>
     <main>
         <div class="main-container">
             <h1>Bienvenue à mon Portfolio !</h1>
@@ -20,6 +12,6 @@
             <img src="" alt="Justin">
         </div>
     </main>
-    <?php include('./assets/include/footer.inc'); ?>
-</body>
-</html>
+
+<?php
+    include('./assets/include/footer.php');
