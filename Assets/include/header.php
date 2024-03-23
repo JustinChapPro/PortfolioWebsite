@@ -12,6 +12,13 @@
 <header>
   <nav class="navbar">
     <div class="navbar_nom"><h1>Mon Portfolio</h1></div>
+
+    <!-- Toggle pour choisir entre moi et Émile -->
+    <div class="toggle-wrapper">
+      <input type="checkbox" id="toggle" class="toggle">
+      <label for="toggle" class="toggle-label"></label>
+      <p class="toggle-text">Switch entre <span id="Justin">Justin</span> <span id="Emile">Émile</span>  !</p>
+    </div>
     <button class="hamburger"><i class="fa-solid fa-bars"></i></button>
     <ul class="navbar-nav">
       <li class="nav-item"><a href="#">Accueil</a></li>
