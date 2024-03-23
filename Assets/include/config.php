@@ -11,7 +11,7 @@
         $serverBd = '127.0.0.1';
         $usagerBd = 'root';
         $motDePasseBd = '';
-        $nomBD = 'site_porfolio';
+        $nomBD = 'site_portfolio';
     }
     else {
         $serverBd = '';

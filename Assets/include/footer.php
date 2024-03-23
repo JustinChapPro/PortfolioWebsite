@@ -3,7 +3,7 @@
     <p>© 2024 Tout droit résever.</p>
     <p>
       Conception et déveleppement fait par
-      <span id="Justin">Justin Chaput</span>
+      <span id="Auteur">Justin Chaput et Émile Béliveau</span>
     </p>
     <a>Contactez moi !</a>
   </div>
