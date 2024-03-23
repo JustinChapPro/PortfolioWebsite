@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Portfolio</title>
     <link rel="stylesheet" href="./Assets/css/style.css">
-    <script src="script.js"></script>
+    <script src="./assets/js/script.js"></script>
     <script src="https://kit.fontawesome.com/16ddabd7d0.js" crossorigin="anonymous"></script>
 </head>
 <body>
