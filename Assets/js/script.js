@@ -21,8 +21,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const toggle = document.getElementById("toggle");
   const justin = document.getElementById("Justin");
   const emile = document.getElementById("Emile");
+  const main = document.querySelector("main");
 
-  toggle.addEventListener("change", function () {
+  toggle.addEventListener("change", async function () {
+    const person = this.checked ? "Emile" : "Justin";
+    const response = await fetch(`../index.php?person=${person}`);
+    const data = await response.text();
+
+    main.innerHTML = data;
+
     const imageUrl = this.checked
       ? "./assets/commun/Emile.jpg"
       : "./assets/commun/Justin.jpg";
