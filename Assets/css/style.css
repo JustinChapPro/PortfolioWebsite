@@ -1,33 +1,34 @@
 /*Global css*/
 
-@media screen and (max-width: 2500px) {
+@media screen and (min-width: 768px) {
   html {
     height: 100%;
-  }
-
-  body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-    background-image: url("../commun/Justin.jpg");
-    background-repeat: repeat;
-    background-position: center center;
-    background-size: contain;
   }
 
   main {
     flex-grow: 1;
   }
 
+  body {
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+  }
+
   /* Navbar css */
-  .navbar {
+  #navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  }
+
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 96%;
   }
 
   .navbar__logo {
@@ -168,31 +169,8 @@
     border-radius: 5px;
     border-width: 0px;
   }
-}
 
-@media screen and (max-width: 768px) {
-  .hamburger {
-    display: block;
-    position: absolute;
-    right: 10px;
-    cursor: pointer;
-    font-size: 30px;
-  }
-
-  .navbar-nav {
-    display: none;
-    width: 35%;
-    flex-direction: column;
-    margin-top: 1rem;
-  }
-
-  .nav-item {
-    text-align: center;
-    margin: 0.5rem 0;
-  }
-}
-
-/* Toggle css */
+  /* Toggle css */
 
 .toggle-wrapper {
   position: relative;
@@ -239,4 +217,49 @@
   display: block;
   padding-top: 0;
   margin-top: 0;
+}
+
+#mainEmile {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background-image: url("../commun/Emile.jpg");
+  background-repeat: repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+#mainJustin {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background-image: url("../commun/Justin.jpg");
+  background-repeat: repeat;
+  background-position: center center;
+  background-size: contain;
+}
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    font-size: 30px;
+  }
+
+  .navbar-nav {
+    display: none;
+    width: 35%;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  .nav-item {
+    text-align: center;
+    margin: 0.5rem 0;
+  }
 }

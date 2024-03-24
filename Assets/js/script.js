@@ -15,35 +15,42 @@ connectionOption.addEventListener("click", function () {
   else connectionForm.style.display = "block";
 });
 
-// Permet de choisir emile ou justin
+// // Permet de choisir emile ou justin
+const toggle = document.getElementById("toggle");
+const justin = document.getElementById("Justin");
+const emile = document.getElementById("Emile");
 
-document.addEventListener("DOMContentLoaded", function () {
-  const toggle = document.getElementById("toggle");
-  const justin = document.getElementById("Justin");
-  const emile = document.getElementById("Emile");
-  const main = document.querySelector("main");
+toggle.addEventListener("change", function () {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const url = urlParams.get('person');
+  
+  console.log(url);
 
-  toggle.addEventListener("change", async function () {
-    const person = this.checked ? "Emile" : "Justin";
-    const response = await fetch(`../index.php?person=${person}`);
-    const data = await response.text();
+  if (url !== 'undefined' || url !== '') {
+    if (url === "Justin")
+      urlParams.set('person', 'Emile');
+    else
+      urlParams.set('person', 'Justin');
+  }
+  else {
+    urlParams.set('person', 'Emile');
+  }
 
-    main.innerHTML = data;
-
-    const imageUrl = this.checked
-      ? "./assets/commun/Emile.jpg"
-      : "./assets/commun/Justin.jpg";
-    document.body.style.backgroundImage = `url('${imageUrl}')`;
-    document.body.style.backgroundSize = "contain";
-    document.body.style.backgroundPosition = "center center";
-    document.body.style.backgroundRepeat = "repeat";
-
-    if (this.checked) {
-      justin.style.color = "black";
-      emile.style.color = "green";
-    } else {
-      justin.style.color = "green";
-      emile.style.color = "black";
-    }
-  });
+  const newUrl = window.location.origin + window.location.pathname + '?' + urlParams.toString();
+  window.location.replace(newUrl);
 });
+
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}

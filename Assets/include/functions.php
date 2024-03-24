@@ -28,3 +28,16 @@ function genToken($numberLength) {
 
     return $token;
 }
+
+function getJustinEmile() {
+    if (isset($_GET['person'])) {
+        $person = $_GET['person'];
+        
+        if ($person === 'Emile')
+            echo "unchecked";
+        else
+            echo "checked";
+    }
+    else
+        echo "unchecked";
+}

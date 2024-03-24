@@ -1,6 +1,6 @@
 <footer class="footer">
   <div class="footer-container">
-    <p>© 2024 Tout droit résever.</p>
+    <p>© 2024 Tout droit réserver.</p>
     <p>
       Conception et déveleppement fait par
       <span id="Auteur">Justin Chaput et Émile Béliveau</span>
